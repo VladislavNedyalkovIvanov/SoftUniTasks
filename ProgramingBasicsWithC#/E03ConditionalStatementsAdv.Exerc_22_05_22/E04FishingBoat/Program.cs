@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace E04FishingBoat
 {
@@ -14,70 +14,38 @@ namespace E04FishingBoat
             decimal discount = 0m;
             decimal totalPrice = 0m;
 
-            if (season == "Spring")
+
+            switch(season)
             {
-                price = 3000m;
-                if (numberOfFishers <= 6)
-                {
-                    discount = price * 0.10m;
-                }
-                else if (numberOfFishers >= 7 && numberOfFishers <= 11)
-                {
-                    discount = price * 0.15m;
-                }
-                else if (numberOfFishers >= 12)
-                {
-                    discount = price * 0.25m;
-                }
+                case "Spring":
+                    price = 3000m;
+                    break;
+                case "Summer":
+                    price = 4200m;
+                    break;
+                case "Autumn":
+                    price = 4200m;
+                    break;
+                case "Winter":
+                    price = 2600m;
+                    break;
+
             }
-            else if (season == "Summer")
+
+
+            if (numberOfFishers <= 6)
             {
-                price = 4200m;
-                if (numberOfFishers <= 6)
-                {
-                    discount = price * 0.10m;
-                }
-                else if (numberOfFishers >= 7 && numberOfFishers <= 11)
-                {
-                    discount = price * 0.15m;
-                }
-                else if (numberOfFishers >= 12)
-                {
-                    discount = price * 0.25m;
-                }
+                discount = price * 0.10m;
             }
-            else if (season == "Autumn")
+            else if (numberOfFishers >= 7 && numberOfFishers <= 11)
             {
-                price = 4200m;
-                if (numberOfFishers <= 6)
-                {
-                    discount = price * 0.10m;
-                }
-                else if (numberOfFishers >= 7 && numberOfFishers <= 11)
-                {
-                    discount = price * 0.15m;
-                }
-                else if (numberOfFishers >= 12)
-                {
-                    discount = price * 0.25m;
-                }
+                discount = price * 0.15m;
             }
-            else if (season == "Winter")
+            else if (numberOfFishers >= 12)
             {
-                price = 2600m;
-                if (numberOfFishers <= 6)
-                {
-                    discount = price * 0.10m;
-                }
-                else if (numberOfFishers >= 7 && numberOfFishers <= 11)
-                {
-                    discount = price * 0.15m;
-                }
-                else if (numberOfFishers >= 12)
-                {
-                    discount = price * 0.25m;
-                }
+                discount = price * 0.25m;
             }
+
 
             totalPrice = price - discount;
             decimal bonusDiscount = 0m;
