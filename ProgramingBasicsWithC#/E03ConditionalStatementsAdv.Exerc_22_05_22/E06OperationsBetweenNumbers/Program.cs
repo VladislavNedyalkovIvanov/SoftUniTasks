@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace E06OperationsBetweenNumbers
 {
@@ -11,48 +11,37 @@ namespace E06OperationsBetweenNumbers
             char symbol = char.Parse(Console.ReadLine());
 
             double result = 0;
-            if (symbol == '+')
+           switch (symbol)
             {
-                result = N1 + N2;
+                case '+':
+                    result = N1 + N2;
+                    break;
+                case '-':
+                    result = N1 - N2;
+                    break;
+                case '*':
+                    result = N1 * N2;
+                    break;
+
+            }
+            if (result != 0)
+            {
                 if (result % 2 == 0)
                 {
-                    Console.WriteLine($"{N1} + {N2} = {result} - even");
+                    Console.WriteLine($"{N1} {symbol} {N2} = {result} - even");
                 }
                 else if (result % 2 != 0)
                 {
-                    Console.WriteLine($"{N1} + {N2} = {result} - odd");
+                    Console.WriteLine($"{N1} {symbol} {N2} = {result} - odd");
                 }
             }
-            else if (symbol == '-')
-            {
-                result = N1 - N2;
-                if (result % 2 == 0)
-                {
-                    Console.WriteLine($"{N1} - {N2} = {result} - even");
-                }
-                else if (result % 2 != 0)
-                {
-                    Console.WriteLine($"{N1} - {N2} = {result} - odd");
-                }
-            }
-            else if (symbol == '*')
-            {
-                result = N1 * N2;
-                if (result % 2 == 0)
-                {
-                    Console.WriteLine($"{N1} * {N2} = {result} - even");
-                }
-                else if (result % 2 != 0)
-                {
-                    Console.WriteLine($"{N1} * {N2} = {result} - odd");
-                }
-            }
-            else if (symbol == '/')
+
+            if (symbol == '/')
             {
                 if (N2 != 0)
                 {
                     result = (double)N1 / (double)N2;
-                    Console.WriteLine($"{N1} / {N2} = {result:F2}");
+                    Console.WriteLine($"{N1} {symbol} {N2} = {result:F2}");
                 }
                 else if (N2 == 0)
                 {
@@ -64,7 +53,7 @@ namespace E06OperationsBetweenNumbers
                 if (N2 != 0)
                 {
                     result = N1 % N2;
-                    Console.WriteLine($"{N1} % {N2} = {result}");
+                    Console.WriteLine($"{N1} {symbol} {N2} = {result}");
                 }
                 else if (N2 == 0)
                 {
