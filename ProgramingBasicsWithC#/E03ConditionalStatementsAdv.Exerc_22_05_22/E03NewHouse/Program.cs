@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace E03NewHouse
 {
@@ -10,62 +10,72 @@ namespace E03NewHouse
             int numberFlowers = int.Parse(Console.ReadLine());
             int budget = int.Parse(Console.ReadLine());
 
-            decimal price = 0m;
-            decimal discount = 0m;
-            decimal addPrice = 0m;
-            decimal totalPrice = 0m;
+            double price = 0;
+            double discount = 0;
+            double addPrice = 0;
+            double totalPrice = 0;
+
+            switch(typeOfFlowers)
+            {
+                case "Roses":
+                    price = 5;
+                    break;
+                case "Dahlias":
+                    price = 3.80;
+                    break;
+                case "Tulips":
+                    price = 2.80;
+                    break;
+                case "Narcissus":
+                    price = 3;
+                    break;
+                case "Gladiolus":
+                    price = 2.50;
+                    break;
+            }
+            totalPrice = numberFlowers * price;
 
             if (typeOfFlowers == "Roses")
             {
-                price = 5m;
-                totalPrice = numberFlowers * price;
                 if (numberFlowers > 80)
                 {
-                    discount = totalPrice * 0.1m;
+                    discount = totalPrice * 0.1;
                 }
             }
             else if (typeOfFlowers == "Dahlias")
             {
-                price = 3.80m;
-                totalPrice = numberFlowers * price;
                 if (numberFlowers > 90)
                 {
-                    discount = totalPrice * 0.15m;
+                    discount = totalPrice * 0.15;
                 }
             }
             else if (typeOfFlowers == "Tulips")
             {
-                price = 2.80m;
-                totalPrice = numberFlowers * price;
                 if (numberFlowers > 80)
                 {
-                    discount = totalPrice * 0.15m;
+                    discount = totalPrice * 0.15;
                 }
             }
             else if (typeOfFlowers == "Narcissus")
             {
-                price = 3m;
-                totalPrice = numberFlowers * price;
                 if (numberFlowers < 120)
                 {
-                    addPrice = totalPrice * 0.15m;
+                    addPrice = totalPrice * 0.15;
                 }
-
             }    
             else if (typeOfFlowers == "Gladiolus")
             {
-                price = 2.50m;
-                totalPrice = numberFlowers * price;
                 if (numberFlowers < 80)
                 {
-                    addPrice = totalPrice * 0.20m;
+                    addPrice = totalPrice * 0.20;
                 }
             }
 
-            decimal totalPriceAfterDiscAndAdd = totalPrice - discount + addPrice;
 
-            decimal allLeft = (decimal)budget - totalPriceAfterDiscAndAdd;
-            decimal allNeeds = totalPriceAfterDiscAndAdd - (decimal)budget;
+            double totalPriceAfterDiscAndAdd = totalPrice - discount + addPrice;
+
+            double allLeft = budget - totalPriceAfterDiscAndAdd;
+            double allNeeds = totalPriceAfterDiscAndAdd - budget;
 
             if (price > 0)
             {
