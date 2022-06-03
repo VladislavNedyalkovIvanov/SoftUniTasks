@@ -14,7 +14,6 @@ namespace E04FishingBoat
             decimal discount = 0m;
             decimal totalPrice = 0m;
 
-
             switch(season)
             {
                 case "Spring":
@@ -29,9 +28,7 @@ namespace E04FishingBoat
                 case "Winter":
                     price = 2600m;
                     break;
-
             }
-
 
             if (numberOfFishers <= 6)
             {
