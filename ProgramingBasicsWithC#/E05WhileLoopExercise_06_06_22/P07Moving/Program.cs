@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace P07Moving
 {
@@ -11,7 +11,7 @@ namespace P07Moving
             int height = int.Parse(Console.ReadLine());
             int volume = (width * length) * height;
             string boxes;
-            while ((boxes = Console.ReadLine()) != "Done" && volume > 0)
+            while ((boxes = Console.ReadLine()) != "Done")
             {
                 int boxesMoved = int.Parse(boxes);
                 volume -= boxesMoved;
