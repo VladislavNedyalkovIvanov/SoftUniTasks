@@ -10,7 +10,7 @@ namespace P04Walking
             int stepsAll = 0;
 
             string stop;
-            while ((stop = Console.ReadLine()) != "Going home" && stepsAll <= purpose)
+            while ((stop = Console.ReadLine()) != "Going home")
             {
                 int steps = int.Parse(stop);
                 stepsAll += steps;
