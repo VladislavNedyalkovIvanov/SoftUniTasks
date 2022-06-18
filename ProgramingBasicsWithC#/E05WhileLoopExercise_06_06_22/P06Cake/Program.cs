@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace P06Cake
 {
@@ -10,7 +10,7 @@ namespace P06Cake
             int width = int.Parse(Console.ReadLine());
             int size = length * width;
             string pieces;
-            while ((pieces = Console.ReadLine()) != "STOP" && size > 0)
+            while ((pieces = Console.ReadLine()) != "STOP")
             {
                 int taken = int.Parse(pieces);
                 size -= taken;
