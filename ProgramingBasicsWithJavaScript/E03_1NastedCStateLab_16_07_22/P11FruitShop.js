@@ -41,3 +41,8 @@ if (price != null) {
     console.log(result);
 }
 }
+
+fruitShop(["tomato",
+"Monday",
+"0.5"])
+
