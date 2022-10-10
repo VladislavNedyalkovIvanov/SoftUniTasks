@@ -25,7 +25,7 @@ function dayOfWeek(inbox) {
         default:
             console.log("Error");
             break;
-
+            // Comment
     }
 }
 
